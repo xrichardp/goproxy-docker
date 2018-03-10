@@ -3,7 +3,7 @@ FROM alpine:3.7
 ENV PROXY_PATH /goproxy
 ENV CERT_PATH $PROXY_PATH/cert
 
-COPY ./start.sh /start.sh && chmod a+x /start.sh 
+COPY ./start.sh /start.sh
 RUN mkdir -p $CERT_PATH
 COPY ./cert $CERT_PATH
 WORKDIR $PROXY_PATH 
