@@ -14,5 +14,6 @@ RUN  apk update \
 	&& tar -zxvf proxy-linux-amd64.tar.gz \
 	&& rm -rf proxy-linux-amd64.tar.gz 
 
-EXPOSE ["80","8080"]
+EXPOSE 80
+EXPOSE 8080
 CMD ["/start.sh"]
